@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - SV Documentation</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">SV Documentation</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="info.html">Info</a></li>
+      <li><a class="active" href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <div class="contact-details">
+      <p>Phone: <a href="tel:7993442841">7993442841</a></p>
+      <p>Email: <a href="mailto:bandelashiva900@gmail.com">bandelashiva900@gmail.com</a></p>
+    </div>
+
+    <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+      <input type="hidden" name="access_key" value="892fd62b-0b38-4fa1-aa39-0867d54ade91" />
+      
+      <input type="text" name="name" placeholder="Your Name" maxlength="20" required />
+      <input type="email" name="email" id="email" maxlength="45" placeholder="Your Email" />
+      <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" />
+
+      <textarea name="message" id="message" rows="5" cols="20" placeholder="Your Message" maxlength="300" required></textarea>
+      <p id="charCountMsg" style="color: red; font-size: 0.9em;">300 characters remaining</p>
+
+      <!-- CAPTCHA Section -->
+      <div class="captcha-container">
+        <span id="captchaCode" style="font-weight:bold;"></span>
+        <button type="button" class="refresh-captcha" onclick="generateCaptcha()">↻</button>
+      </div>
+      <label for="captchaInput">Enter CAPTCHA below:</label>
+      <input type="text" id="captchaInput" placeholder="Enter CAPTCHA" required />
+
+      <button type="submit">Send Message</button>
+      <p id="form-status" style="text-align:center; color:green;"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SV Documentation and Services. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts/validation.js"></script>
+</body>
+</html>

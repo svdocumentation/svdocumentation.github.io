@@ -1,0 +1,68 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SV Documentation and Services</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+  <header>
+    <nav id="navbar">
+      <div class="logo">SV Documentation</div>
+      <div class="hamburger" onclick="toggleMenu()">
+        &#9776;
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="info.html">Info</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="lic.html">LIC Info</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Welcome to SV Documentation and Services</h1>
+      <p>Agreements, Notaries, Plot Registrations and More</p>
+      <img src="assets/owner.jpg" alt="Owner" class="owner-image">
+    </section>
+
+    <section class="gallery">
+      <img src="assets/shopphoto1.jpg" alt="Shop 1">
+      <img src="assets/shopphoto2.jpg" alt="Shop 2">
+      <video controls>
+        <source src="assets/shopvideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contact us at : 9848289841/7993442841 | anandlic900@gmail.com</p>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+  <script src="scripts/effects.js"></script>
+  <script type="text/javascript">
+    (function(d, t) {
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function() {
+          window.voiceflow.chat.load({
+            verify: { projectID: '67f3f1e46e58086dfaccbdda' },
+            url: 'https://general-runtime.voiceflow.com',
+            versionID: 'production',
+            voice: {
+              url: "https://runtime-api.voiceflow.com"
+            }
+          });
+        }
+        v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
+</body>
+</html>
+

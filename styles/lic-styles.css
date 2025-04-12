@@ -1,0 +1,144 @@
+/* General body styling */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0f4ff;
+    color: #333;
+  }
+  
+  /* Header styling */
+  header {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    padding: 1rem;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover, .nav-links a.active {
+    color: yellow;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  /* LIC Introduction Section */
+  .lic-intro {
+    text-align: center;
+    padding: 2rem;
+    background: #fff5e1;
+  }
+  
+  .lic-logo {
+    width: 150px;
+    margin-bottom: 1rem;
+  }
+  
+  .lic-intro h1 {
+    color: #4facfe;
+  }
+  
+  /* LIC Benefits Section */
+  .lic-benefits {
+    padding: 2rem;
+    background: #e0f7fa;
+  }
+  
+  .lic-benefits h2 {
+    color: #00c6ff;
+  }
+  
+  .lic-benefits ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .lic-benefits li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  .lic-benefits li::before {
+    content: '✔';
+    color: #4caf50;
+    position: absolute;
+    left: 0;
+  }
+  
+  /* LIC Contact Section */
+  .lic-contact {
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+  }
+  
+  .lic-contact h2 {
+    color: #4facfe;
+  }
+  
+  .lic-contact a {
+    color: #4caf50;
+    text-decoration: none;
+  }
+  
+  .lic-contact a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #4facfe;
+    color: white;
+    margin-top: 2rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background: #4facfe;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+    }
+  
+    .nav-links.show {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .lic-logo {
+      width: 100px;
+    }
+  }
+  
